@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 use Mike42\Escpos\Printer;
-require dirname(__DIR__) . '/../../../multiInsert/app/Http/Controllers/MultiController.php';
+//require dirname(__DIR__) . '/../../../multiInsert/app/Http/Controllers/MultiController.php';
 
 class ImpresoraController extends Controller
 {
@@ -36,9 +36,11 @@ class ImpresoraController extends Controller
     {
         //echo "Se recibe desde impresora el id: ".$id;
         //dd($request->all());
+        var_dump($_SERVER['DOCUMENT_ROOT']);
+        die();
         #Enviar a otro proyecto
-        $comunicador = new MultiController();
-        $comunicador->recibir($request->modelo);
+        //$comunicador = new MultiController();
+        //$comunicador->recibir($request->modelo);
         /*foreach ($request->modelo as $key => $modelo) {
             echo $request->modelo[$key].'<br>';
         }*/
