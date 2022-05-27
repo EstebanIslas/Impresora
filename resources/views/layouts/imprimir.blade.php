@@ -11,6 +11,14 @@
                     <div class="alert alert-success" role="alert">
                         <a href="{{route('impresion')}}">Imprimir</a><br>
                     </div>
+
+                    <form action="{{route('enviar')}}" method="GET">
+
+                        <input type="text" name="modelo" id="modelo" class="form-control" value="Samsung Test">
+
+                        <input type="submit" value="Submit">
+
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImpresoraController;
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,6 @@ Route::get('impresion/index', [ImpresoraController::class, 'index'])->name('inde
 Route::get('/offline', function () {    
     return view('vendor/laravelpwa/offline');
 });
+
+#Recibir form de otro proyecto
+Route::get('enviar/', [ImpresoraController::class, 'enviar'])->name('enviar');
