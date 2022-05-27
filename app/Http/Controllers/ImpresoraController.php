@@ -36,8 +36,14 @@ class ImpresoraController extends Controller
     {
         //echo "Se recibe desde impresora el id: ".$id;
         //dd($request->all());
-        var_dump($_SERVER['DOCUMENT_ROOT']);
-        die();
+
+        $client = new \GuzzleHttp\Client();
+        $res = $client->get('http://127.0.0.1/multiInsert/public/recibir?modelo='.$request->modelo);
+        #echo $res->getStatusCode(); // 200
+        echo $res->getBody();
+
+        //return view('layouts.imprimir');    
+        //return redirect()->away('http://127.0.0.1/multiInsert/public');
         #Enviar a otro proyecto
         //$comunicador = new MultiController();
         //$comunicador->recibir($request->modelo);
