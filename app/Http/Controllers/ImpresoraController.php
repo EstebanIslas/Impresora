@@ -14,6 +14,11 @@ class ImpresoraController extends Controller
         return view('layouts.imprimir');
     }
 
+    public function print_js()
+    {
+        return view('layouts.print');
+    }
+
     public function impresion()
     {
         $nombre_impresora = "eQual";

@@ -34,3 +34,7 @@ Route::get('/offline', function () {
 
 #Recibir form de otro proyecto
 Route::get('enviar/', [ImpresoraController::class, 'enviar'])->name('enviar');
+
+
+#Impresion con JS
+Route::get('print_js/', [ImpresoraController::class, 'print_js'])->name('print_js');
