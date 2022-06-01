@@ -37,4 +37,6 @@ Route::get('enviar/', [ImpresoraController::class, 'enviar'])->name('enviar');
 
 
 #Impresion con JS
-Route::get('print_js/', [ImpresoraController::class, 'print_js'])->name('print_js');
+Route::get('print_js/', [ImpresoraController::class, 'print_js'])->name('print_js'); //Metodo para mostrar impresoras
+Route::get('print_direct/', [ImpresoraController::class, 'print_direct'])->name('print_direct'); //Metodo para imprimir directo
+
